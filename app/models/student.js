@@ -9,5 +9,5 @@ export default DS.Model.extend({
 	city: DS.attr('string'),
 	type: DS.attr('string'),
 	gpa: DS.attr('string'),
-	image: DS.attr('string')
+	imageURL: DS.attr('string')
 });

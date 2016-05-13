@@ -5,5 +5,8 @@
                         <td>{{student.city}}</td>
                         <td>{{student.gpa}}</td>
                         <td>
-                          <i class="fa fa-times text-danger text" {{action "showName" student}}></i>
+			  <i class="fa fa-edit text-primary text" {{action "editStudent" student}}></i>
+                        </td>
+                        <td>
+                          <i class="fa fa-times text-danger text" {{action "deleteStudent" student}}></i>
                        </td>

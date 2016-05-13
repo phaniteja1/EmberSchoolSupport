@@ -20,19 +20,10 @@
                       <option value="3">Export</option>
                     </select>
                     <button class="btn btn-sm btn-default">Apply</button>
+                    {{#link-to "addStudent"}}<button class="btn btn-sm btn-primary">Add New Student</button>{{/link-to}}
                   </div>
                   <div class="col-sm-4 m-b-xs">
-                    <div class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-sm btn-default active">
-                        <input type="radio" name="options" id="option1"> Day
-                      </label>
-                      <label class="btn btn-sm btn-default">
-                        <input type="radio" name="options" id="option2"> Week
-                      </label>
-                      <label class="btn btn-sm btn-default">
-                        <input type="radio" name="options" id="option2"> Month
-                      </label>
-                    </div>
+
                   </div>
                   <div class="col-sm-3">
                     <div class="input-group">
@@ -56,17 +47,18 @@
                           </span>
                         </th>
                         <th>Course</th>
-			<th>Type</th>
-			<th>City</th>
-			<th>GPA</th>
+			                  <th>Type</th>
+			                  <th>City</th>
+			                  <th>GPA</th>
+                        <th width="30">Edit</th>
                         <th width="30">Delete</th>
                       </tr>
                     </thead>
                     <tbody>
                  	{{#each model as |studentUnit|}}
-  				{{student-row student=studentUnit deleteStudent="deleteStudent"}}
-			{{/each}}  
-		  </tbody>
+  				            {{student-row student=studentUnit editStudent="editStudent"}}
+			            {{/each}}
+		              </tbody>
                   </table>
                 </div>
                 <footer class="panel-footer">
