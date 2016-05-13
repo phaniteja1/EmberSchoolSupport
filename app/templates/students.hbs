@@ -48,36 +48,25 @@
                     <thead>
                       <tr>
                         <th width="20"><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox"><i></i></label></th>
-                        <th class="th-sortable" data-toggle="class">Project
+                        <th class="th-sortable" data-toggle="class">Name
                           <span class="th-sort">
                             <i class="fa fa-sort-down text"></i>
                             <i class="fa fa-sort-up text-active"></i>
                             <i class="fa fa-sort"></i>
                           </span>
                         </th>
-                        <th>Name</th>
                         <th>Course</th>
 			<th>Type</th>
 			<th>City</th>
 			<th>GPA</th>
-                        <th width="30"></th>
+                        <th width="30">Delete</th>
                       </tr>
                     </thead>
                     <tbody>
-		     {{#each model as |student|}}
-                      <tr>
-                        <td><label class="checkbox m-l m-t-none m-b-none i-checks"><input type="checkbox" name="post[]"><i></i></label></td>
-                        <td>{{student.name}}</td>
-                        <td>{{student.course}}</td>
-                        <td>{{student.type}}</td>
-			<td>{{student.city}}</td>
-			<td>{{student.gpa}}</td>
-                        <td>
-                          <a href="#" class="active" data-toggle="class"><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-                        </td>
-                      </tr>
-		     {{/each}}
-                    </tbody>
+                 	{{#each model as |studentUnit|}}
+  				{{student-row student=studentUnit deleteStudent="deleteStudent"}}
+			{{/each}}  
+		  </tbody>
                   </table>
                 </div>
                 <footer class="panel-footer">
