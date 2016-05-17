@@ -1,44 +1,44 @@
-                      <form class="bs-example form-horizontal" {{action "addStudent" on="submit"}}>
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label">Name</label>
-                          <div class="col-lg-10">
-                            {{input value=name class="form-control" placeholder=""}}
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label">Course</label>
-                          <div class="col-lg-10">
-                            {{input value=course class="form-control" placeholder=""}}
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-lg-2 control-label">City</label>
-                          <div class="col-lg-10">
-                            {{input value=city class="form-control" placeholder=""}}
-                          </div>
-                        </div>
-                        <div class="form-group">
-                      <label class="col-lg-2 control-label">Type</label>
-                      <div class="col-lg-10">
-                        {{input value=type class="form-control" placeholder=""}}
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">GPA</label>
-                      <div class="col-lg-10">
-                        {{input value=gpa class="form-control" placeholder=""}}
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-lg-2 control-label">Image URL</label>
-                      <div class="col-lg-10">
-                        {{input value=imageURL class="form-control" placeholder=""}}
-                      </div>
-                    </div>
-                        <div class="form-group">
-                          <div class="col-sm-4 col-sm-offset-2">
-                          <button type="submit" class="btn btn-primary">Add Student</button>
-                           {{#link-to "students"}} <button class="btn btn-default">Cancel</button>{{/link-to}}
-                          </div>
-                        </div>
-                      </form>
+<form class="bs-example form-horizontal" {{action "determineAction" on="submit"}}>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-10">
+        {{input value=student.name class="form-control" placeholder=student.name}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Course</label>
+      <div class="col-lg-10">
+        {{input value=student.course class="form-control" placeholder=student.course}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">City</label>
+      <div class="col-lg-10">
+        {{input value=student.city class="form-control" placeholder=student.city}}
+      </div>
+    </div>
+    <div class="form-group">
+  <label class="col-lg-2 control-label">Enrollment</label>
+  <div class="col-lg-10">
+    {{input value=student.enrollment class="form-control" placeholder=student.enrollment}}
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-2 control-label">GPA</label>
+  <div class="col-lg-10">
+    {{input value=student.gpa class="form-control" placeholder=student.gpa}}
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-lg-2 control-label">Image URL</label>
+  <div class="col-lg-10">
+    {{input value=student.imageURL class="form-control" placeholder=student.imageURL}}
+  </div>
+</div>
+    <div class="form-group">
+      <div class="col-sm-4 col-sm-offset-2">
+      <button type="submit" class="btn btn-primary">Submit</button>
+       {{#link-to "students"}} <button class="btn btn-default">Cancel</button>{{/link-to}}
+      </div>
+    </div>
+  </form>
